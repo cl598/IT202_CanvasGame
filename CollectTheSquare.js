@@ -152,8 +152,8 @@ function endGame() {
 
 // Move the target square to a random position
 function moveTarget() {
-    //targetX = Math.round(Math.random() * canvas.width - targetLength);
-    //targetY = Math.round(Math.random() * canvas.height - targetLength);
+    targetX = Math.round(Math.random() * canvas.width - targetLength);
+    targetY = Math.round(Math.random() * canvas.height - targetLength);
 
 }
 
@@ -209,7 +209,7 @@ function draw() {
     }
 
     // Draw the square **
-    context.fillStyle = randomColor;
+    context.fillStyle = '#FF0000';
     context.fillRect(x, y, sideLength, sideLength);
 
     // Draw the sphere **
