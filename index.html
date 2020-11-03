@@ -19,7 +19,7 @@
     // Randomize the color **
     var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
 
-    // Audio
+    // Audio **
     var soundEffect;
     var battleMusic;
 
@@ -137,7 +137,7 @@
         draw();
 
         // Sound effect audio **
-        soundEffect = new Sound("Audio/Gravel_Sound.mp3");
+        soundEffect = new Sound("Audio/Bell.mp3");
 
         // Battle music audio **
         battleMusic = new Sound("Audio/Battle.mp3");
@@ -224,11 +224,8 @@
 
         // Draw the square **
         context.fillStyle = randomColor;
+        context.rotate(1 * Math.PI/180);
         context.fillRect(x, y, sideLength, sideLength);
-
-        // Draw the sphere **
-        context.fillStyle = randomColor;
-        context.arc(100,75,50,0,2 * Math.PI);
 
         // Draw the target
         context.fillStyle = '#00FF00';
